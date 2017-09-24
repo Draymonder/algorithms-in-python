@@ -6,7 +6,7 @@ def search(arr, key, lower=0, upper=None):
         return upper
     else:
         mid = (lower + upper) // 2
-        if arr[mid] > key:
+        if arr[mid] > key:    # when lower = 2,upper = 3 ,the loop will not stop.
             return search(arr, key, lower, mid-1)
         else:
             return search(arr, key, mid, upper)
